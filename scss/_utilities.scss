@@ -1,0 +1,145 @@
+.container{
+  max-width: $website-width;
+  margin: auto;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  height: 100%;
+}
+.text-center{
+  text-align: center;
+}
+.bottom-line{
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  margin: 5px auto 10px auto;
+}
+.right-line{
+  border-right: 4px solid $main-color;
+}
+.lead{
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.bg-main{
+  background: $main-color;
+  color: #fff;
+}
+.bg-dark{
+  background: $dark-color;
+  color: #fff;
+}
+.bg-medium{
+  background: $medium-color;
+}
+.bg-light{
+  background: $light-color;
+}
+.cards{
+  border: 1px solid $medium-color;
+  padding: 0.7rem;
+}
+
+// buttons
+%btn-shared{
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border: none;
+  margin-top: 1.5rem;
+  text-align: center;
+  transition: all 500ms ease;
+  cursor: pointer ;
+}
+.btn{
+  &:hover{
+    @extend %btn-shared;
+    background: $main-color;
+    color: #fff;
+  }
+  &-light{
+    @extend %btn-shared;
+    background: $light-color;
+    color: $dark-color;
+  }
+  &-dark{
+    @extend %btn-shared;
+    background: $dark-color;
+    color: #fff;
+    &:hover{
+      background: $main-color;
+    }
+  }
+  &-main{
+    @extend %btn-shared;
+    background: $main-color;
+    color: #fff;
+    &:hover{
+      background: $light-color;
+      color: #000;
+    }
+  }
+}
+
+// padding
+.py{
+  &-1{
+    padding: 1rem 0;
+  }
+  &-2{
+    padding: 2rem 0;
+  }
+  &-3{
+    padding: 3rem 0;
+  }
+  &-4{
+    padding: 4rem 0;
+  }
+}
+
+// margin
+.my{
+  &-1{
+    margin: 1rem 0;
+  }
+}
+.my{
+  &-2{
+    margin: 2rem 0;
+  }
+}
+.my{
+  &-3{
+    margin: 3rem 0;
+  }
+}
+.my{
+  &-4{
+    margin: 4rem 0;
+  }
+}
+
+//Grid & flex systems 
+.one-to-two{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  .item-2{
+    grid-column: 2 / span 3;
+  }
+}
+.col-3{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.col-4{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.7rem;
+}
+.flex-center{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
